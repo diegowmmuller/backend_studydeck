@@ -1,0 +1,40 @@
+### CREATE USER
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "name":"sergio",
+    "username":"serginho",
+    "email":"sergio@email.com",
+    "password":"senha123"
+}
+
+### LOGIN USER
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email":"sergio@email.com",
+    "password":"senha123"
+}
+
+### CREATE CARD
+POST http://localhost:3000/cards
+Content-Type: application/json
+
+{
+    "name":"matematica",
+    "description":"algebra",
+    "start_time":"2024-05-02",
+    "end_time":"2024-05-02",
+    "status":"true",
+    "color":"#fff",
+    "user_id":2
+}
+
+### GET CARD BY USER
+GET http://localhost:3000/cards/user/1
+
+
+### GET CARD BY ID
+GET http://localhost:3000/cards/1
